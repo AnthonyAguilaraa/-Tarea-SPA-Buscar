@@ -1,0 +1,23 @@
+<h1>{{heroe.nombre}} <small>{{heroe.aparicion}}</small></h1>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <br><br>
+        <a (click)="volver()" class="btn btn-outline-danger btn-block">Regresar</a>
+        <!--  class="btn btn-outline-danger btn-block" routerLinkActive="active" [routerLink]="[/heroes]">Regresar</a>-->
+    </div>
+
+    <div class="col-md-8">
+        <h3>{{heroe.nombre}}</h3>
+        <hr>
+        <p>
+            {{heroe.bio}}
+        </p>
+        <div>
+            <img [src]="heroe.img" alt="">
+            <img *ngIf ="heroe.casa == 'DC'" src="assets/img/dc.png" alt="">
+            <img *ngIf ="heroe.casa == 'Marvel'" src="assets/img/marvel.png" alt="">
+        </div>
+    </div>
+
+</div>
